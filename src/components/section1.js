@@ -21,8 +21,8 @@ const Section1 = () => {
             <h3>Transparencia</h3>
           </div>
           <div className="content">
-            <img src="../images/sipot.png" alt="" />
-            <img src="../images/inai.png" alt="" />
+            <img src="/images/sipot.png" alt="" />
+            <img src="/images/inai.png" alt="" />
           </div>
           <div className="button">
             <button className="btn"><i className="fa-solid fa-eye fa-flip-horizontal" /> <p>Ver mas detalles</p></button>
