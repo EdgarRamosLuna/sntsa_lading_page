@@ -8,7 +8,7 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
-  --font-lg: 18px;
+  /*--font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
   --font-sx: 12px;
@@ -23,7 +23,7 @@
   --space-6: 64px;
   --size-content: 54rem;
   --size-gutter: var(--space-5);
-  --size-gap: var(--space-6);
+  --size-gap: var(--space-6);*/
 }
 html {
   -webkit-text-size-adjust: 100%;
@@ -43,182 +43,94 @@ body {
   margin: 0;
   word-wrap: break-word;
 }
-a {
-  background-color: transparent;
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
+
+/*
+overflow: hidden;
+.lateralHeader {
+  width: 60px;
+  background: #824416;
+  height: 100vh;
+  position: fixed;
 }
-a:active,
-a:hover {
-  outline-width: 0;
-  text-decoration: none;
+.layoutContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
 }
-abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-  text-decoration: none;
+.cildrenContainer {
+  width: calc(100% - 60px);
+  position: relative;
+  margin-left: auto;
+  height: 100vh;
+  overflow-y: scroll;
+  background: blue;
+}*/
+.menu {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  justify-items: center;
+  align-items: center;
+  background-color: #7d242b;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  gap: 10px;
 }
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  margin: 0;
-  margin-bottom: 3rem;
-  padding: 0;
-  line-height: var(--line-height-dense);
-  letter-spacing: -0.01em;
-}
-h1 > b {
-  color: var(--color-primary);
-}
-img {
-  border-style: none;
-  max-width: 100%;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: var(--font-mono);
-  font-size: 1em;
-  line-height: inherit;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 0;
-  margin-bottom: calc(var(--space-4) - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
-hgroup,
-img,
-figure,
-fieldset,
-ul,
-ol,
-dl,
-dd,
-p {
+
+.menu ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 10px;
 }
-ul,
-ol {
-  margin-left: var(--space-4);
-  list-style-position: outside;
-  list-style-image: none;
-}
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  font-size: 0.875rem;
-  line-height: var(--line-height-normal);
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: var(--border-radius);
-  overflow: auto;
-  word-wrap: normal;
-  padding: var(--space-4);
-}
-b,
-strong,
-dt,
-th {
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
-li {
-  margin-bottom: calc(var(--space-4) / 2);
+
+.menu ul li a:hover {
+  /*  background-color: white;*/
+  color: #efefef;
 }
-ol li,
-ul li {
-  padding-left: 0;
+.logo {
+  align-self: center;
+  justify-self: center;
 }
-li > ol,
-li > ul {
-  margin-bottom: calc(var(--space-4) / 2);
-  margin-left: var(--space-4);
-  margin-top: calc(var(--space-4) / 2);
+.menu-items {
+  align-self: center;
+  justify-self: center;
 }
-blockquote *:last-child {
-  margin-bottom: 0;
+.hero-bg {
+  width: 100%;
+  height: 50vh;
+  background: url("../images/hero.jpeg");
+  background-position: left 38%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-p {
-  max-width: 680px;
-}
-code {
-  font-size: 0.875rem;
-}
-kbd {
-  font-size: 0.875rem;
-}
-samp {
-  font-size: 0.875rem;
-}
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-tt,
-code {
-  background-color: var(--color-code-bg);
-  border-radius: var(--border-radius);
-  color: var(--color-code);
-  font-family: var(--font-mono);
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-  word-break: normal;
-}
-pre code {
-  background: none;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  content: "\00a0";
-  letter-spacing: -0.2em;
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: none;
+
+.hero-bg::before{
+  content: 'Sindicato Nacional de Trabajadores de la Secretaría de Salud';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #373737;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  display: flex;
+  font-size: 3em;
+  text-transform: uppercase;
 }
