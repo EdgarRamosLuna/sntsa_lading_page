@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
           />
         </div>
         <ul className="menu-items">
-          <li>
+          <li className="active-menu">
             <Link to="/">Inicio</Link>
           </li>
           <li>
