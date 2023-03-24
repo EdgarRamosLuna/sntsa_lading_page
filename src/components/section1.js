@@ -1,57 +1,86 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
-import { Section1S } from "./Styles"
 
 const Section1 = () => {
-    const [animate, setAnimate] = useState(false);
-    useEffect(() => {
-      
-    
-      setTimeout(() =>{
-        setAnimate(true);
-      }, 500)
-    }, [])
-    
+  const [animate, setAnimate] = useState(false)
+
   return (
-    <Section1S>
+    <div className="section1">
       <div className="items">
         <div className={`item animacion`}>
           <div className="title">
             <h3>Transparencia</h3>
           </div>
           <div className="content">
-            <img src="/images/sipot.png" alt="" />
-            <img src="/images/inai.png" alt="" />
+            <StaticImage
+              src="../images/sipot.png"
+              width={200}
+              quality={95}
+              alt=""
+              placeholder="blurred"
+              layout="fixed"
+            />
+            <StaticImage
+              src="../images/inai.png"
+              width={200}
+              quality={95}
+              alt=""
+              placeholder="blurred"
+              layout="fixed"
+            />
           </div>
           <div className="button">
-            <button className="btn"><i className="fa-solid fa-eye fa-flip-horizontal" /> <p>Ver mas detalles</p></button>
+            <button className="btn">
+              <i className="fa-solid fa-eye fa-flip-horizontal" />{" "}
+              <p>Ver mas detalles</p>
+            </button>
           </div>
         </div>
-        <div className="item animacion">
+        <div className="item animacion2">
           <div className="title">
             <h3>Normatividad del S.N.T.S.A.</h3>
           </div>
           <div className="content">
-            <img src="../images/logo2.png" alt="" />
+            <StaticImage
+              src="../images/logo2.png"
+              width={200}
+              quality={95}
+              alt=""
+              placeholder="blurred"
+              layout="fixed"
+            />
           </div>
           <div className="button">
-          <button className="btn"><i className="fa-solid fa-eye fa-flip-horizontal" /> <p>Ver mas detalles</p></button>
+            <button className="btn">
+              <i className="fa-solid fa-eye fa-flip-horizontal" />{" "}
+              <p>Ver mas detalles</p>
+            </button>
           </div>
         </div>
-        <div className="item animacion">
+        <div className="item animacion3">
           <div className="title">
             <h3>Tabulador de Sueldos y Salarios 2018</h3>
           </div>
           <div className="content">
-            <img src="../images/tabu.png" style={{width:200}} alt="" />
+            <StaticImage
+              src="../images/tabu.png"
+              width={200}
+              quality={95}
+              alt=""
+              placeholder="blurred"
+              layout="fixed"
+            />
           </div>
           <div className="button">
-          <button className="btn"><i className="fa-solid fa-eye fa-flip-horizontal" /> <p>Ver mas detalles</p></button>
+            <button className="btn">
+              <i className="fa-solid fa-eye fa-flip-horizontal" />{" "}
+              <p>Ver mas detalles</p>
+            </button>
           </div>
         </div>
       </div>
-    </Section1S>
+    </div>
   )
 }
 
