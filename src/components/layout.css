@@ -72,7 +72,7 @@ overflow: hidden;
   grid-template-columns: repeat(2, auto);
   justify-items: center;
   align-items: center;
-  background-color: #7d242b73;
+ /* background-color: #7d242b73;*/
   color: white;
   font-family: Arial, sans-serif;
   padding: 10px;
