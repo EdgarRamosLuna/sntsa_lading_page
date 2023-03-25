@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import Section1 from "../components/section1"
+import AboutUs from "../components/content/AboutUs"
 
 const links = [
   {
@@ -79,8 +80,9 @@ const IndexPage = () => (
           gridArea: "1/1",
           // You can set a maximum height for the image, if you wish.
           // maxHeight: 600,
+          backgroundAttachment:"fixed"
         }}
-        layout="fullWidth"
+        
         // You can optionally force an aspect ratio for the generated image
         aspectRatio={3 / 1}
         // This is a presentational image, so the alt should be an empty string
@@ -108,6 +110,7 @@ const IndexPage = () => (
     </div>
     
     <Section1 />
+    <AboutUs />
     {/*<div className={styles.textCenter}>
       <StaticImage
         src="../images/logoP.png"
