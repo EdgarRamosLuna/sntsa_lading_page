@@ -7,6 +7,7 @@ const HeaderComponent = () => {
   const [isSticky, setSticky] = useState(false)
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     // Get the menu element
     const menu = document.querySelector("#menu")
 
