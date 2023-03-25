@@ -141,18 +141,20 @@ const AboutUs = () => {
     }, 500)
   }
   const [activeItem, setActiveItem] = useState(1)
-  const tabItems = document.querySelectorAll(".tab-item")
-  let sum = 0
-  for (let i = 0; i < tabItems.length; i++) {
-    // Access the current element using its index
-    const element = tabItems[i]
-    sum += element.offsetWidth
-    // Perform an action on the element
-    //console.log()
-  }
+
   const [totalW, setTotalW] = useState(1296)
   useEffect(() => {
+    const tabItems = document.querySelectorAll(".tab-item")
+    let sum = 0
+
     if (sum > 0) {
+      for (let i = 0; i < tabItems.length; i++) {
+        // Access the current element using its index
+        const element = tabItems[i]
+        sum += element.offsetWidth
+        // Perform an action on the element
+        //console.log()
+      }
       setTotalW(sum)
     }
   }, [activeItem])
