@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import { StaticImage } from "gatsby-plugin-image"
+import { PageProvider } from "./context/PageContext"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <PageProvider>
       <div className="layoutContainer">
         <div className="lateralHeader">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -45,13 +46,16 @@ const Layout = ({ children }) => {
               }}
               id="contact"
             >
-              © {new Date().getFullYear()} &middot; SNTSA
+              <div className="footer-container">
+
+              {/*© {new Date().getFullYear()} &middot; SNTSA*/}
+              </div>
               
             </footer>
           </div>
         </div>
       </div>
-    </>
+    </PageProvider>
   )
 }
 

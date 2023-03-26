@@ -1,6 +1,8 @@
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
+import { useContext } from "react"
 import { useRef } from "react"
+import { PageContext } from "../context/PageContext"
 import Button from "./Button"
 import Card from "./Card"
 import Title from "./Title"
@@ -311,21 +313,23 @@ const AboutUs = () => {
   }
   const [activeItem, setActiveItem] = useState(1)
 
-  const [totalW, setTotalW] = useState(1296)
+  const [totalW, setTotalW] = useState(1101)
   useEffect(() => {
     const tabItems = document.querySelectorAll(".tab-item")
-    let sum = 0
+    let sum2 = 0
 
-    if (sum > 0) {
+    if (activeItem > 0) {
       for (let i = 0; i < tabItems.length; i++) {
         // Access the current element using its index
         const element = tabItems[i]
-        sum += element.offsetWidth
+        sum2 += element.offsetWidth
+        //   console.log(element.offsetWidth)
         // Perform an action on the element
         //console.log()
       }
-      setTotalW(sum)
+      setTotalW(sum2)
     }
+    console.log(sum2)
   }, [activeItem])
   //console.log(sum);
   /*useEffect(() => {
@@ -334,10 +338,10 @@ const AboutUs = () => {
     setTotalW(Number(sum));
     return () => {}
   }, [])*/
-
+  const { refs } = useContext(PageContext)
   return (
-    <div className="page-container m-t-b" id="team">
-      <div className="title-container">
+    <div className="page-container m-t-b" >
+      <div className="title-container" id="about" ref={refs[1]}>
         <Title>Quienes Somos</Title>
       </div>
       <div className="tab-container">

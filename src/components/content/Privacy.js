@@ -1,11 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import Title from "./Title"
 import "./priv.css"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { PageContext } from "../context/PageContext"
 const Privacy = () => {
+    const { refs} = useContext(PageContext)
   return (
-    <div className="page-container m-t-b" id="priv">
-      <div className="title-container" id="org">
+    <div className="page-container m-t-b" >
+      <div className="title-container" id="priv" ref={refs[5]}>
         <Title>Aviso de Privacidad</Title>
       </div>
       <div className="txt-container">

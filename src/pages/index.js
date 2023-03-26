@@ -12,6 +12,7 @@ import Slider from "../components/content/Slider"
 import OrgStructure from "../components/content/OrgStructure"
 import Privacy from "../components/content/Privacy"
 import Contact from "../components/content/Contact"
+import Transp from "../components/content/Transp"
 
 const links = [
   {
@@ -82,6 +83,7 @@ const IndexPage = () => (
     <Section1 />
     <AboutUs />
     <Documents />
+    <Transp/>
     <OrgStructure />
     <Privacy/>
     <Contact/>

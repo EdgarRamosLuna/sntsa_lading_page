@@ -34,7 +34,7 @@
 .slider-container {
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-top: 70px;
   /*height: 300px;  set a fixed height */
 }
 
@@ -60,7 +60,7 @@
   background-color: transparent;
   border: none;
   font-size: 24px;
-  color: #fff;
+  color: #f6e437;
   cursor: pointer;
   z-index: 1;
   transition: opacity 0.3s ease-in-out;
@@ -189,8 +189,8 @@
 }
 
 .slider-dot {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background: #fff;
   border-radius: 100%;
   transition: all 0.3s;
@@ -206,5 +206,6 @@
 }
 .active-dot{
     transition: all 0.3s;
-    opacity: 0.7;
+    /*opacity: 0.7;*/
+    background: #f6e437;
 }

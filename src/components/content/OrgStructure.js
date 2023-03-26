@@ -1,11 +1,12 @@
 import { StaticImage } from "gatsby-plugin-image"
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useState, useContext } from "react"
 import Title from "./Title"
 import "./org.css"
+import { PageContext } from "../context/PageContext"
 const OrgStructure = () => {
   const elementRef = useRef(null)
-  const [active, setActive] = useState(false)
-  const callback = (entries, observer) => {
+  
+  /*const callback = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
        // console.log(entry)
@@ -31,10 +32,11 @@ const OrgStructure = () => {
       observer.unobserve(elementRef.current)
     }
   }, [])
-
+*/
+const { refs, active } = useContext(PageContext)
   return (
-    <div className="page-container" ref={elementRef}>
-      <div className="title-container"id="org" >
+    <div className="page-container">
+      <div className="title-container"id="org" ref={refs[4]}>
         <Title>Estructura Orgánica</Title>
       </div>
       {active === true && (

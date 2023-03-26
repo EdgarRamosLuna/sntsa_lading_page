@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { PageContext } from "./context/PageContext"
 const HeaderComponent = () => {
   //   console.log(menu);
   const [isSticky, setSticky] = useState(false)
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" })
     // Get the menu element
     const menu = document.querySelector("#menu")
 
@@ -36,9 +37,18 @@ const HeaderComponent = () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-  const [mActive, setMActive] = useState(1)
+
+  const { refs, value, activeM, mActive, setMActive, setActive } =
+    useContext(PageContext)
+
+  const handleAcitve = () => {
+    setMActive(5)
+    setTimeout(() => {
+      setActive(true)
+    }, 1000)
+  }
   return (
-    <header id="home">
+    <header id="home" ref={refs[0]}>
       <div className="menu-container">
         <nav id="menu" className={`menu ${isSticky ? "sticky" : ""}`}>
           <div className={`logo logo${isSticky ? "-sticky" : "-nosticky"}`}>
@@ -59,25 +69,46 @@ const HeaderComponent = () => {
             </div>
           </div>
           <ul className="menu-items">
-            <li className={`${mActive === 1 && 'active-menu'}`} onClick={() => setMActive(1)}>
+            <li
+              className={`${mActive === 1 ? "active-menu" : ""}`}
+              onClick={() => setMActive(1)}
+            >
               <AnchorLink to="/#home">Inicio</AnchorLink>
             </li>
-            <li className={`${mActive === 2 && 'active-menu'}`} onClick={() => setMActive(2)}>
-              <AnchorLink to="/#team">Quienes Somos</AnchorLink>
+            <li
+              className={`${mActive === 2 ? "active-menu" : ""}`}
+              onClick={() => setMActive(2)}
+            >
+              <AnchorLink to="/#about">Quienes Somos</AnchorLink>
             </li>
-            <li className={`${mActive === 3 && 'active-menu'}`} onClick={() => setMActive(3)}>
+            <li
+              className={`${mActive === 3 ? "active-menu" : ""}`}
+              onClick={() => setMActive(3)}
+            >
               <AnchorLink to="/#docs">Documentos Básicos</AnchorLink>
             </li>
-            <li className={`${mActive === 4 && 'active-menu'}`} onClick={() => setMActive(4)}>
+            <li
+              className={`${mActive === 4 ? "active-menu" : ""}`}
+              onClick={() => setMActive(4)}
+            >
               <AnchorLink to="/#transp">Transparencia</AnchorLink>
             </li>
-            <li className={`${mActive === 5 && 'active-menu'}`} onClick={() => setMActive(5)}>
+            <li
+              className={`${mActive === 5 ? "active-menu" : ""}`}
+              onClick={handleAcitve}
+            >
               <AnchorLink to="/#org">Estructura Orgánica</AnchorLink>
             </li>
-            <li className={`${mActive === 6 && 'active-menu'}`} onClick={() => setMActive(6)}>
+            <li
+              className={`${mActive === 6 ? "active-menu" : ""}`}
+              onClick={() => setMActive(6)}
+            >
               <AnchorLink to="/#priv">Aviso de Privacidad</AnchorLink>
             </li>
-            <li className={`${mActive === 7 && 'active-menu'}`} onClick={() => setMActive(7)}>
+            <li
+              className={`${mActive === 7 ? "active-menu" : ""}`}
+              onClick={() => setMActive(7)}
+            >
               <AnchorLink to="/#contact">Contacto</AnchorLink>
             </li>
           </ul>

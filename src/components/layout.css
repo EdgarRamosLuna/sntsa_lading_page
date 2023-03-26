@@ -35,6 +35,7 @@ html {
   line-height: var(--line-height-normal);
   overflow-y: scroll;
   overflow-x: hidden;
+  /*scroll-behavior: smooth;*/
 }
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -75,8 +76,8 @@ overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, auto);
   /*background-color: #7d242b73;*/
-  background-color: #7d242b;
-  
+  background-color: #7d242b;  
+  top: 0;
   justify-items: center;
   align-items: center;
   color: white;
@@ -231,6 +232,11 @@ overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
 }
+.items2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
 .item {
   display: flex;
   flex-direction: column;
@@ -359,7 +365,7 @@ overflow: hidden;
 .tab-container {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  justify-content: center;
+  justify-content: start;
   position: relative;
   color: #7A7A7A;
 }
@@ -386,7 +392,7 @@ overflow: hidden;
   max-width: 1400px;
   display: flex;
   margin: 10px auto;
-  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 600px;
   width: 100%;
 }

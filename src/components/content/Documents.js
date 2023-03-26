@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useContext } from "react"
 import Title from "./Title"
 import "./docuements.css"
 import Document from "./Document"
+import { PageContext } from "../context/PageContext"
 const documentsInfo = [
   {
     title: "Estatuto General",
@@ -56,10 +57,11 @@ const documentsInfo = [
   
 ]
 const Documents = () => {
+    const { refs } = useContext(PageContext)
   return (
-    <div className="page" id="docs">
+    <div className="page" >
       <div className="page-container items-center">
-        <div className="title-container" >
+        <div className="title-container" id="docs" ref={refs[2]}>
           <Title>Documentos Basicos</Title>
         </div>
         <div className="docs-container">

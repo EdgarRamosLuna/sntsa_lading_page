@@ -1,3 +1,4 @@
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 
@@ -30,10 +31,10 @@ const Section1 = () => {
             />
           </div>
           <div className="button">
-            <button className="btn">
+            <AnchorLink to="/#transp" className="btn">
               <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>
-            </button>
+            </AnchorLink>
           </div>
         </div>
         <div className="item animacion2">
@@ -51,10 +52,10 @@ const Section1 = () => {
             />
           </div>
           <div className="button">
-            <button className="btn">
+            <AnchorLink to="/#about" className="btn">
               <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>
-            </button>
+            </AnchorLink>
           </div>
         </div>
         <div className="item animacion3">
@@ -72,10 +73,14 @@ const Section1 = () => {
             />
           </div>
           <div className="button">
-            <button className="btn">
+            <a
+              href="https://sindicatodesalud.org.mx/wp-content/uploads/2018/07/Tabulador-2018.pdf"
+              target="_blank"
+              className="btn"
+            >
               <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>
-            </button>
+            </a>
           </div>
         </div>
       </div>
