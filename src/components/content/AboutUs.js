@@ -1,33 +1,68 @@
+import { StaticImage } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
 import { useRef } from "react"
 import Button from "./Button"
+import Card from "./Card"
 import Title from "./Title"
 const tabItemsArray = [
   {
     id: 1,
     text: (
-      <p>{`Por más de siete décadas, el Sindicato de Salud ha cumplido los propósitos y objetivos de su fundación. Aquella organización constituida en 1944 por la firme determinación de los trabajadores de dos dependencias extintas del gobierno federal, es en la actualidad, un sindicato vigoroso, vanguardista, eficaz, unido, prestigiado y democrático, con la membresía más numerosa de toda su existencia, con mayor presencia nacional y renovados objetivos, claros y precisos, con proyecto gremial de justicia laboral y social para sus afiliados.
+      <>
+        <p>{`Por más de siete décadas, el Sindicato de Salud ha cumplido los propósitos y objetivos de su fundación. Aquella organización constituida en 1944 por la firme determinación de los trabajadores de dos dependencias extintas del gobierno federal, es en la actualidad, un sindicato vigoroso, vanguardista, eficaz, unido, prestigiado y democrático, con la membresía más numerosa de toda su existencia, con mayor presencia nacional y renovados objetivos, claros y precisos, con proyecto gremial de justicia laboral y social para sus afiliados.
 
         El S.N.T.S.A. ha sabido equilibrar con sensibilidad los derechos y conquistas laborales de sus afiliados en el ejercicio de la práctica profesional de la salud, el cumplimiento ejemplar de los deberes laborales y el respeto a las instituciones públicas, que ha permitido a la dirigencia sindical asumir firme, responsable y plenamente en todas las etapas de la Secretaría de Salud, como el Acuerdo Nacional para la Descentralización de los Servicios de Salud de 1996, los Acuerdos de Regularización Laboral de 2008 y 2009 y la Formalización Laboral de 2014, 2015 y 2016. Reconociendo, así, al Comité Ejecutivo Nacional y su estructura territorial como el representante legal, legítimo y único de los derechos laborales de los trabajadores, como lo disponen los Artículos 1 y 2 de las Condiciones Generales de Trabajo de la Dependencia.
         
         Con el propósito de conmemorar el LXX aniversario de la puesta en vigor de las primeras Condiciones Generales de Trabajo de la Secretaría de Salud, acordadas entre las autoridades de la Dependencia y el Sindicato de Salud en diciembre de 1947, de celebrar el inicio de la vigencia de este mismo instrumento laboral colectivo suscrito recientemente en el mes de junio de 2016, se ha dispuesto la elaboración de este Compendio, con el propósito de reseñar los perfiles y características más significativos que dan identidad a la organización, tales como datos históricos, fundamentos y objetivos de existencia, estructura organizacional, bases normativas, documentos básicos, programas y actividades relevantes, compromiso social y resultados del trabajo de los afiliados, entre otros.
         
         Tengo la convicción de que este Compendio cumple con su propósito de ofrecer un panorama de lo que ha sido y es el Sindicato de Salud, los principios y bases sobre los cuales se estructura y de lo que será en el futuro: firme a su proyecto de justicia, reivindicación y mejoramiento social, laboral y profesional de los trabajadores de la salud y que, por lo tanto, será de utilidad para las personas, integrantes o no de la organización, interesadas o involucradas en el quehacer del S.N.T.S.A.`}</p>
+      </>
     ),
   },
   {
     id: 2,
     text: (
-      <p>{`En el Congreso constituyente celebrado en la ciudad de México, Distrito Federal, durante los días 13, 14 y 15 de marzo de 1944
+      <div className="tab-item-cont">
+        <div className="img-tab">
+          <StaticImage
+            src={`../../images/ant.png`}
+            loading="eager"
+            placeholder="blurred"
+            layout="fixed"
+            height={300}
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt=""
+            style={{ marginBottom: `var(--space-3)` }}
+          />
+        </div>
+        <p>{`En el Congreso constituyente celebrado en la ciudad de México, Distrito Federal, durante los días 13, 14 y 15 de marzo de 1944
         
       los trabajadores de base al servicio de la Secretaría de Salubridad y Asistencia, constituyeron el SINDICATO NACIONAL DE TRABAJADORES DE LA SECRETARÍA DE SALUBRIDAD Y ASISTENCIA, ACTUALMENTE DENOMINADO SINDICATO NACIONAL DE TRABAJADORES DE LA SECRETARÍA DE SALUD que usará indistintamente las siglas SNTSA
       `}</p>
+      </div>
     ),
   },
   {
     id: 3,
     text: (
-      <p>{`En octubre de 1943, el Presidente de la República, Manuel Ávila Camacho, emitió el decreto para crear la Secretaría de Salubridad y Asistencia, a partir de la fusión de la entonces Secretaría de Asistencia Pública y del Departamento de Salubridad. Ante esta determinación presidencial, los trabajadores de ambas Dependencias, por medio de sus respectivos sindicatos, suscribieron un Convenio, con el aval de la F.S.T.S.E., para coordinarse y seguir atendiendo sus tareas como representantes laborales, y “elaborar la Convocatoria para el Congreso de los trabajadores de Asistencia Pública y de Salubridad”.
+      <div className="tab-item-cont">
+        <div className="img-tab">
+          <StaticImage
+            src={`../../images/sembl.png`}
+            loading="eager"
+            placeholder="blurred"
+            layout="fixed"
+            height={300}
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt=""
+            style={{ marginBottom: `var(--space-3)` }}
+          />
+        </div>
+        <p
+          style={{ textAlign: "left" }}
+        >{`En octubre de 1943, el Presidente de la República, Manuel Ávila Camacho, emitió el decreto para crear la Secretaría de Salubridad y Asistencia, a partir de la fusión de la entonces Secretaría de Asistencia Pública y del Departamento de Salubridad. Ante esta determinación presidencial, los trabajadores de ambas Dependencias, por medio de sus respectivos sindicatos, suscribieron un Convenio, con el aval de la F.S.T.S.E., para coordinarse y seguir atendiendo sus tareas como representantes laborales, y “elaborar la Convocatoria para el Congreso de los trabajadores de Asistencia Pública y de Salubridad”.
 
       El Congreso fundador de la organización se llevó a cabo los días 13, 14 y 15 de marzo de 1944 en el Teatro de los Cinematografistas de la Ciudad de México, bajo su primera denominación: Sindicato Nacional de Trabajadores de la Secretaría de Salubridad y Asistencia.
       
@@ -40,20 +75,36 @@ const tabItemsArray = [
       Diversas determinaciones del Estado mexicano en el transcurso de su existencia, han influido en la evolución sindical, de la misma manera que la creación de la Secretaría de Salubridad y Asistencia en 1943, la transformación de esta Dependencia en Secretaría de Salud en 1985, condujo a la adecuación de la denominación del S.N.T.S.A., fecha en la cual, adoptó el nombre que actualmente tiene: Sindicato Nacional de Trabajadores de la Secretaría de Salud.
       
       De la misma manera, otras decisiones de los diversos órganos de gobierno de nuestro país, también han marcado el devenir sindical, entre ellas, se puede referir aquellas que han creado programas de salud o unidades de atención médica. De estas acciones destacan, por los efectos que han tenido en las dimensiones de la membresía o en la organización seccional, las que han llevado a la creación de los Institutos Nacionales de Salud, de los Hospitales Federales de Referencia y Regionales de Alta Especialidad, los Hospitales Civiles o Generales en los estados del país, los Hospitales Psiquiátricos, así como diversas unidades administrativas de la Secretaría de Salud.`}</p>
+      </div>
     ),
   },
   {
     id: 4,
     text: (
-      <>
-        <p>{`El Sindicato Nacional de Trabajadores de la Secretaría de Salud fue constituido hace 70 años, con el propósito de conjuntar, conducir y representar a los trabajadores de la Secretaría de Salud, en el contexto de una situación nacional y mundial en el que se desarrollaron importantes transformaciones sociales, políticas, económicas, culturales y, por supuesto, también en el campo de la salud.
+      <div className="tab-item-cont">
+        <div className="img-tab">
+          <StaticImage
+            src={`../../images/dec.webp`}
+            loading="eager"
+            placeholder="blurred"
+            layout="fixed"
+            height={300}
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt=""
+            style={{ marginBottom: `var(--space-3)` }}
+          />
+        </div>
+        <p
+          style={{ textAlign: "left" }}
+        >{`El Sindicato Nacional de Trabajadores de la Secretaría de Salud fue constituido hace 70 años, con el propósito de conjuntar, conducir y representar a los trabajadores de la Secretaría de Salud, en el contexto de una situación nacional y mundial en el que se desarrollaron importantes transformaciones sociales, políticas, económicas, culturales y, por supuesto, también en el campo de la salud.
   
         El impulso organizador que venía predominando en toda la orbe de los movimientos obreros y de trabajadores, tuvo en nuestro país una aceptación generalizada, lo que, para el caso de los empleados públicos, permitió, a través del ejercicio libre, democrático y convencido de las garantías individuales postuladas en la Constitución Política de nuestro país, la institución de la Federación de Sindicatos de Trabajadores al Servicio del Estado y más adelante, los días 13, 14 y 15 de marzo de 1944, la creación del Sindicato Nacional de Trabajadores de la Secretaría de Salud, a partir de la fusión de dos pedestales históricos del sindicalismo burocrático: el Sindicato de Trabajadores de Asistencia Pública y el Sindicato Nacional de Trabajadores de Salubridad.
         
         Desde entonces, el SNTSA ha perfilado con claridad un proyecto sindical sustentando en principios ideológicos irrenunciables como son la autonomía sindical, la democracia interna, la unidad sindical, la fortaleza de gestión, la presencia nacional de la organización, el aumento de su presencia social y política, el progreso laboral y profesional de sus afiliados, la solidaridad con las causas de la clase trabajadora, la identidad con el movimiento histórico de los trabajadores al servicio del Estado, su compromiso con la salud de los mexicanos, la conciencia nacionalista y el desarrollo del país, que ahora, actualiza y confirma en el marco de la realización de su XX Congreso Nacional Ordinario y de la celebración del 70 Aniversario de su fundación.
         `}</p>
         <b>Por ello se pronuncia:</b>
-        <p>{`
+        <p style={{ textAlign: "left" }}>{`
          Por la observancia irrestricta de las garantías individuales y los postulados sociales establecidos en la Constitución General de la República, de manera particular, en lo que se refiere al Apartado B del Artículo 123 constitucional.
          
          Por el respeto absoluto a la autonomía sindical, como un principio de legalidad fundamental para las organizaciones obreras y de trabajadores, que permite el acuerdo social, la convivencia ciudadana armónica, la gobernabilidad nacional y el funcionamiento adecuado de las instituciones públicas y políticas del país.
@@ -101,20 +152,138 @@ const tabItemsArray = [
          Por la mejora de los servicios y prestaciones del ISSSTE y por el fortalecimiento de esta Institución nacional del Estado Mexicano, de gran significado e importancia para los trabajadores al servicio del Estado, para lo cual reitera su compromiso de mantener su alianza con la FSTSE en torno a este propósito.
          
          Por un México próspero, fuerte, libre, unido, democrático y justo, cuyas instituciones nacionales sirvan a las personas y tengan por objeto su desarrollo y bienestar, en un marco de certeza jurídica, de respeto a los derechos humanos, a la dignidad de las personas y al esfuerzo laboral de los trabajadores.`}</p>
-      </>
+      </div>
     ),
   },
   {
     id: 5,
     text: (
-      <p>{`Es el estudio, mejoramiento y defensa de los intereses laborales de sus afiliados, en los términos establecidos por la Ley y las disposiciones legales de carácter supletorio.      `}</p>
+      <div className="tab-item-cont">
+        <div className="img-tab">
+          <StaticImage
+            src={`../../images/obj.webp`}
+            loading="eager"
+            placeholder="blurred"
+            layout="fixed"
+            height={300}
+            quality={95}
+            formats={["auto", "webp", "avif"]}
+            alt=""
+            style={{ marginBottom: `var(--space-3)` }}
+          />
+        </div>
+        <p
+          style={{ textAlign: "left" }}
+        >{`Es el estudio, mejoramiento y defensa de los intereses laborales de sus afiliados, en los términos establecidos por la Ley y las disposiciones legales de carácter supletorio.      `}</p>
+      </div>
     ),
   },
   {
     id: 6,
     text: (
-      <p>{`En el Congreso constituyente celebrado en la ciudad de México, Distrito Federal, durante los días 13, 14 y 15 de marzo de 1944, los trabajadores de base al servicio de la Secretaría de Salubridad y Asistencia, constituyeron el SINDICATO NACIONAL DE TRABAJADORES DE LA SECRETARÍA DE SALUBRIDAD Y ASISTENCIA, ACTUALMENTE DENOMINADO SINDICATO NACIONAL DE TRABAJADORES DE LA SECRETARÍA DE SALUD, que usará indistintamente las siglas SNTSA
-      `}</p>
+      <div className="cards-container">
+        <Card
+          image={
+            <>
+              <StaticImage
+                src={`../../images/logo2.png`}
+                loading="eager"
+                placeholder="blurred"
+                layout="fixed"
+                width={125}
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+                style={{ marginBottom: `var(--space-3)` }}
+              />
+            </>
+          }
+          title="Escudo del SNTSA"
+        >
+          <p>{`Reseña del Escudo del SNTSA
+ 
+
+ Desde 1936, los Sindicatos de Trabajadores de Asistencia Pública (STAP) y el Sindicato Nacional de Trabajadores de Salubridad, experimentaron una aceleración y unificación que finalmente se concreto en 1944, tras la determinación presidencial de unir la Secretaria de Asistencia Pública y el Departamento de Salubridad en 1943.
+ 
+ 
+  El 15 de marzo de 1944 tras celebrar el congreso constituyente del SNTSA quedo elegido el Comité Ejecutivo Nacional del SNTSA con Estatuto General y Reglamento Interno aprobados.A partir de esta fecha el Escudo también fue fusionado: Del Sindicato de Trabajadores de Asistencia Pública y del Sindicato de Trabajadores de Salubridad.`}</p>
+        </Card>
+        <Card
+          image={
+            <>
+              <StaticImage
+                src={`../../images/logos/logo2.gif`}
+                loading="eager"
+                placeholder="blurred"
+                layout="fixed"
+                width={125}
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+                style={{ marginBottom: `var(--space-3)` }}
+              />
+            </>
+          }
+          title="Escudo del Sindicato de Trabajadores Salubridad"
+        >
+          <p>{`El escudo del Sindicato de Trabajadores de Salubridad representado por una mano con una cadena en la mu&ntilde;eca sosteniendo fuertemente una serpiente.
+
+Elementos:
+
+– La Serpiente: Representa las enfermedades
+– La mano: La salud que las detiene Con un lazo alrededor en forma de escudo y la leyenda de “Sindicato Nacional de Trabajadores de Salubridad”
+
+Los colores negro, rojo, blanco y amarillo.`}</p>
+        </Card>
+        <Card
+          image={
+            <>
+              <StaticImage
+                src={`../../images/logos/logo3.gif`}
+                loading="eager"
+                placeholder="blurred"
+                layout="fixed"
+                width={125}
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+                style={{ marginBottom: `var(--space-3)` }}
+              />
+            </>
+          }
+          title="Escudo del Sindicato de la Secretaria de Asistencia Pública"
+        >
+          <p>{`El escudo de la Secretaria de Asistencia Pública representado por una especie de pequeño estandarte con una estrella roja en el centro y una mano levantada con el puño cerrado.
+Lo cual significa:
+
+– La Mano : La unidad y fuerza de los trabajadores.
+
+Los colores usados negro, rojo, blanco y amarillo.`}</p>
+        </Card>
+        <Card
+          image={
+            <>
+              <StaticImage
+                src={`../../images/logo2.png`}
+                loading="eager"
+                placeholder="blurred"
+                layout="fixed"
+                width={125}
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt=""
+                style={{ marginBottom: `var(--space-3)` }}
+              />
+            </>
+          }
+          title="Escudo tras la Fusión"
+        >
+          <p>{`La mano levantada sosteniendo la serpiente fuertemente, sin la cadena en la muñeca, teniendo como fondo la estrella roja y a manera
+de estandarte en la parte superior de la leyenda SNTSA.
+
+Los colores usados negro, rojo, blanco y amarillo.`}</p>
+        </Card>
+      </div>
     ),
   },
 ]
@@ -233,7 +402,9 @@ const AboutUs = () => {
       </div>
       <div className="active-tab-container">
         {tabItemsArray.map(tab => {
-          return <>{tab.id === activeItem && <>{tab.text}</>}</>
+          return (
+            <div key={tab.id}>{tab.id === activeItem && <>{tab.text}</>}</div>
+          )
         })}
       </div>
     </div>

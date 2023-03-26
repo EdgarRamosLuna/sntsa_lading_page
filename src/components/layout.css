@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --border-radius: 4px;
   --color-text: #333;
@@ -8,6 +9,7 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  --font-mons: 'Montserrat', sans-serif;
   /*--font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -39,7 +41,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
   font-family: sans-serif;
-  font-family: var(--font-sans);
+  font-family: var(--font-mons);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
@@ -71,10 +73,14 @@ overflow: hidden;
 .menu {
   display: grid;
   grid-template-columns: repeat(2, auto);
+  /*background-color: #7d242b73;*/
+  background-color: #7d242b;
+  
   justify-items: center;
   align-items: center;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-mons);
+  font-weight: 300;
   padding: 10px;
   gap: 10px;
   z-index: 9;
@@ -136,7 +142,8 @@ overflow: hidden;
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 300;
+  line-height: 25px;
   /* text-transform: uppercase;*/
 
   border-radius: 5px;
@@ -384,4 +391,42 @@ overflow: hidden;
   width: 30px;
   height: 5px;
   background: #f6e537;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+}
+.card-item {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 10px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+}
+.card-container {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+.card-text {
+  text-align: center;
+}
+.card-img {
+  display: flex;
+  justify-content: center;
+}
+.card-title {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.tab-item-cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
 }
