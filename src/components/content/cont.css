@@ -1,7 +1,7 @@
 .page2 {
     /*background: #183d28;*/
-    color: #7d242b;
-    background: #FFEB3B;
+    color: #fff;
+    background: #703d23;
     display: flex;
 }
 .contact-info {
@@ -39,6 +39,9 @@ footer.footer {
 }
 footer.footer * {
     color: #fff;
+}
+.info-item a {
+    color:#d8d8d8 !important;
 }
 .footer-container {
     width: 100%;
@@ -93,4 +96,7 @@ footer.footer * {
  .logo-footer {
   /*  padding-right: 16px;
     transform: translateX(-20px);*/
+}
+.map {
+    margin-bottom: 50px;
 }

@@ -27,7 +27,7 @@ const Contact = () => {
         <div className="page-container">
           <div className="title-container">
             <Title color="#7d242b">
-              <span style={{ color: "#2e2e30" }}>Contacto</span>
+              <span style={{ color: "#fff" }}>Contacto</span>
             </Title>
           </div>
           <div className="contact-info">
