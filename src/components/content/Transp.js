@@ -28,7 +28,7 @@ const Transp = () => {
                 />
               </div>
               <div className="button">
-                <a href="https://www.gob.mx/sspc/acciones-y-programas/sistema-de-portales-de-obligaciones-de-transparencia-sipot-194241" target="_blank" className="btn">
+                <a href="https://www.gob.mx/sspc/acciones-y-programas/sistema-de-portales-de-obligaciones-de-transparencia-sipot-194241" target="_blank" rel="noreferrer" className="btn">
                   <i className="fa-solid fa-eye fa-flip-horizontal" />
                   <p>Ver mas detalles</p>
                 </a>
@@ -49,7 +49,7 @@ const Transp = () => {
                 />
               </div>
               <div className="button">
-                <a href="http://www.inai.org.mx/" target="_blank" className="btn">
+                <a href="http://www.inai.org.mx/" target="_blank" rel="noreferrer" className="btn">
                   <i className="fa-solid fa-eye fa-flip-horizontal" />
                   <p>Ver mas detalles</p>
                 </a>

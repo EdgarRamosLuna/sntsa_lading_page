@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
             }}
           >
             <main>{children}</main>
-            <footer
+            {/*<footer
               style={{
                 marginTop: `var(--space-5)`,
                 fontSize: `var(--font-sm)`,
@@ -48,10 +48,10 @@ const Layout = ({ children }) => {
             >
               <div className="footer-container">
 
-              {/*© {new Date().getFullYear()} &middot; SNTSA*/}
+              {/*© {new Date().getFullYear()} &middot; SNTSA*
               </div>
               
-            </footer>
+            </footer>*/}
           </div>
         </div>
       </div>

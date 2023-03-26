@@ -1,4 +1,6 @@
 import React, { createContext, useEffect, useState } from "react"
+import { useMemo } from "react"
+import { useCallback } from "react"
 import { useRef } from "react"
 
 // Crea un contexto
@@ -61,24 +63,35 @@ export const PageProvider = ({ children }) => {
     })
   }
 
-  useEffect(() => {
+  const memoizedRefs = useMemo(() => refs, [refs])
+
+  const observeElements = useCallback(() => {
     const options = {
       root: null,
-      rootMargin: "-150px 0px -633px 0px",
+      rootMargin: "150px 0px -633px 0px",
       //threshold:
     }
 
     const observer = new IntersectionObserver(callback, options)
 
-    for (let i = 0; i < refs.length; i++) {
-      observer.observe(refs[i].current)
+    for (let i = 0; i < memoizedRefs.length; i++) {
+      observer.observe(memoizedRefs[i].current)
     }
+
     return () => {
-      for (let i = 0; i < refs.length; i++) {
-        observer.unobserve(refs[i].current)
+      for (let i = 0; i < memoizedRefs.length; i++) {
+        observer.unobserve(memoizedRefs[i].current)
       }
     }
-  }, [refs])
+  }, [memoizedRefs])
+
+  useEffect(() => {
+    const unobserveElements = observeElements()
+
+    return () => {
+      unobserveElements()
+    }
+  }, [observeElements])
   //const [active, setActive] = useState(false)
   return (
     <PageContext.Provider

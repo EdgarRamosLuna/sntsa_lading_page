@@ -77,6 +77,7 @@ const Section1 = () => {
               href="https://sindicatodesalud.org.mx/wp-content/uploads/2018/07/Tabulador-2018.pdf"
               target="_blank"
               className="btn"
+              rel="noreferrer"
             >
               <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>

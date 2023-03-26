@@ -170,6 +170,14 @@ overflow: hidden;
   cursor: pointer;
   transition: all 0.3s;
 }
+.logo2 {
+  align-self: start;
+  justify-self: end;
+  width: 125px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 .logo-container {
   position: absolute;
 }

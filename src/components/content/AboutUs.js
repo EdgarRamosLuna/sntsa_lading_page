@@ -293,24 +293,7 @@ const AboutUs = () => {
   const rippleRef = useRef(null)
   const [rippleStyle, setRippleStyle] = useState({})
 
-  const handleClick = event => {
-    const rect = event.target.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
-    const size = Math.max(rect.width, rect.height) * 2
-
-    setRippleStyle({
-      left: `${x - size / 2}px`,
-      top: `${y - size / 2}px`,
-      width: `${size}px`,
-      height: `${size}px`,
-      opacity: 1,
-    })
-
-    setTimeout(() => {
-      setRippleStyle({ ...rippleStyle, opacity: 0 })
-    }, 500)
-  }
+  
   const [activeItem, setActiveItem] = useState(1)
 
   const [totalW, setTotalW] = useState(1101)
@@ -329,7 +312,7 @@ const AboutUs = () => {
       }
       setTotalW(sum2)
     }
-    console.log(sum2)
+   // console.log(sum2)
   }, [activeItem])
   //console.log(sum);
   /*useEffect(() => {
