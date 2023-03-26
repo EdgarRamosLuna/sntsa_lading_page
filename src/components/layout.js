@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
                 marginTop: `var(--space-5)`,
                 fontSize: `var(--font-sm)`,
               }}
+              id="contact"
             >
               © {new Date().getFullYear()} &middot; SNTSA
               

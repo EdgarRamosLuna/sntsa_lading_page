@@ -1,9 +1,8 @@
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 const Section1 = () => {
-  const [animate, setAnimate] = useState(false)
+  // const [animate, setAnimate] = useState(false)
 
   return (
     <div className="section1">
@@ -32,7 +31,7 @@ const Section1 = () => {
           </div>
           <div className="button">
             <button className="btn">
-              <i className="fa-solid fa-eye fa-flip-horizontal" />{" "}
+              <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>
             </button>
           </div>
@@ -53,7 +52,7 @@ const Section1 = () => {
           </div>
           <div className="button">
             <button className="btn">
-              <i className="fa-solid fa-eye fa-flip-horizontal" />{" "}
+              <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>
             </button>
           </div>
@@ -74,7 +73,7 @@ const Section1 = () => {
           </div>
           <div className="button">
             <button className="btn">
-              <i className="fa-solid fa-eye fa-flip-horizontal" />{" "}
+              <i className="fa-solid fa-eye fa-flip-horizontal" />
               <p>Ver mas detalles</p>
             </button>
           </div>

@@ -1,0 +1,43 @@
+.page {
+    /*background: #183d28;*/
+    color: #fff;
+    background: #7d242b;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.docs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 100%;
+    margin: 30px 0;
+    gap: 20px;
+}
+.docs {
+    display: flex;
+}
+.doc-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* justify-items: start; */
+    /* align-items: start; */
+    justify-content: start;
+    gap: 15px;
+    align-items: center;
+    scale: 1;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.doc-ico {
+    font-size: 2.5em;
+    
+}
+.doc-txt {
+    
+}
+.doc-item:hover {
+    color: #bdbcbc;
+ 
+    transition: all 0.3s;
+}

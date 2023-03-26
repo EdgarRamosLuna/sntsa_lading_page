@@ -336,7 +336,7 @@ const AboutUs = () => {
   }, [])*/
 
   return (
-    <div className="aboutUs-container" id="team">
+    <div className="page-container m-t-b" id="team">
       <div className="title-container">
         <Title>Quienes Somos</Title>
       </div>

@@ -9,6 +9,9 @@ import Section1 from "../components/section1"
 import AboutUs from "../components/content/AboutUs"
 import Documents from "../components/content/Documents"
 import Slider from "../components/content/Slider"
+import OrgStructure from "../components/content/OrgStructure"
+import Privacy from "../components/content/Privacy"
+import Contact from "../components/content/Contact"
 
 const links = [
   {
@@ -75,12 +78,27 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-     <Slider/>
-    
+    <Slider />
     <Section1 />
     <AboutUs />
     <Documents />
-    {/*<div className={styles.textCenter}>
+    <OrgStructure />
+    <Privacy/>
+    <Contact/>
+  </Layout>
+)
+
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+export const Head = () => <Seo title="Inicio" />
+
+export default IndexPage
+
+{
+  /*<div className={styles.textCenter}>
       <StaticImage
         src="../images/logoP.png"
         loading="eager"
@@ -123,15 +141,5 @@ const IndexPage = () => (
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
-    ))}*/}
-  </Layout>
-)
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Inicio" />
-
-export default IndexPage
+    ))}*/
+}

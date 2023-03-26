@@ -1,191 +1,210 @@
 .slide {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
- /*   height: 100vh;*/
-  }
-  
-  .slide-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slide-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .slide-text {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-  }
-  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  /*   height: 100vh;*/
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-text {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
 .slider-container {
-    position: relative;
-    overflow: hidden;
-    /*height: 300px;  set a fixed height */
-  }
-  
-  .slider {
-    position: relative;
-    white-space: nowrap;
-    transition: left 0.5s ease-in-out;
-    display: grid;
-    grid-template-columns: repeat(3, 100%);
-  }
-  
-  .slider img {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .arrow:hover {
-    opacity: 0.7;
-  }
-  
-  .left-arrow {
-    left: 10px;
-  }
-  
-  .right-arrow {
-    right: 10px;
-  }
-  
-  .fade-in {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  /*height: 300px;  set a fixed height */
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+  transition: left 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+}
+
+.slider img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fade-out 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
     opacity: 0;
-    animation: fade-in 1s ease-in-out forwards;
   }
-  
-  .fade-out {
+  to {
     opacity: 1;
-    animation: fade-out 1s ease-in-out forwards;
   }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
   }
-  
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 0;
   }
-  
-  .slide-in-right {
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+  animation: slide-in-right 0.5s ease-in-out forwards;
+}
+
+.slide-out-right {
+  transform: translateX(-100%);
+  animation: slide-out-right 0.5s ease-in-out forwards;
+}
+
+.slide-in-left {
+  transform: translateX(-100%);
+  animation: slide-in-left 0.5s ease-in-out forwards;
+}
+
+.slide-out-left {
+  transform: translateX(100%);
+  animation: slide-out-left 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-in-right {
+  from {
     transform: translateX(100%);
-    animation: slide-in-right 0.5s ease-in-out forwards;
   }
-  
-  .slide-out-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
     transform: translateX(-100%);
-    animation: slide-out-right 0.5s ease-in-out forwards;
   }
-  
-  .slide-in-left {
+}
+
+@keyframes slide-in-left {
+  from {
     transform: translateX(-100%);
-    animation: slide-in-left 0.5s ease-in-out forwards;
   }
-  
-  .slide-out-left {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
     transform: translateX(100%);
-    animation: slide-out-left 0.5s ease-in-out forwards;
   }
-  
-  @keyframes slide-in-right {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
+}
+
+.slide-in {
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: scale(0);
   }
-  
-  @keyframes slide-out-right {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  to {
+    transform: scale(1);
   }
-  
-  @keyframes slide-in-left {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
+}
+
+@keyframes slide-out {
+  from {
+    transform: scale(1);
   }
-  
-  @keyframes slide-out-left {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100%);
-    }
+  to {
+    transform: scale(0);
   }
-  
-  .slide-in {
-    animation: slide-in 0.5s ease-in-out forwards;
-  }
-  
-  .slide-out {
-    animation: slide-out 0.5s ease-in-out forwards;
-  }
-  
-  @keyframes slide-in {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes slide-out {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0);
-    }
-  }
-  
-  
-  
+}
+
+.slider-dot {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 100%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.slider-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(-25px);
+}
+.active-dot{
+    transition: all 0.3s;
+    opacity: 0.7;
+}

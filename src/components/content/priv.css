@@ -1,0 +1,16 @@
+.txt-container{
+    white-space: pre-line;
+    max-height: 600px;
+    overflow-y: auto;
+}
+.link-list{
+
+}
+a{
+    text-decoration: none;
+    color: #000;
+    
+}
+.txt-container{
+   color:#7A7A7A; 
+}

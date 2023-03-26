@@ -38,7 +38,7 @@ const HeaderComponent = () => {
   }, [])
   const [mActive, setMActive] = useState(1)
   return (
-    <header id="inicio">
+    <header id="home">
       <div className="menu-container">
         <nav id="menu" className={`menu ${isSticky ? "sticky" : ""}`}>
           <div className={`logo logo${isSticky ? "-sticky" : "-nosticky"}`}>
@@ -60,25 +60,25 @@ const HeaderComponent = () => {
           </div>
           <ul className="menu-items">
             <li className={`${mActive === 1 && 'active-menu'}`} onClick={() => setMActive(1)}>
-              <AnchorLink to="/#inicio">Inicio</AnchorLink>
+              <AnchorLink to="/#home">Inicio</AnchorLink>
             </li>
             <li className={`${mActive === 2 && 'active-menu'}`} onClick={() => setMActive(2)}>
               <AnchorLink to="/#team">Quienes Somos</AnchorLink>
             </li>
             <li className={`${mActive === 3 && 'active-menu'}`} onClick={() => setMActive(3)}>
-              <Link to="/">Documentos Básicos</Link>
+              <AnchorLink to="/#docs">Documentos Básicos</AnchorLink>
             </li>
             <li className={`${mActive === 4 && 'active-menu'}`} onClick={() => setMActive(4)}>
-              <Link to="/">Transparencia</Link>
+              <AnchorLink to="/#transp">Transparencia</AnchorLink>
             </li>
             <li className={`${mActive === 5 && 'active-menu'}`} onClick={() => setMActive(5)}>
-              <Link to="/">Estructura Orgánica</Link>
+              <AnchorLink to="/#org">Estructura Orgánica</AnchorLink>
             </li>
             <li className={`${mActive === 6 && 'active-menu'}`} onClick={() => setMActive(6)}>
-              <Link to="/">Aviso de Privacidad</Link>
+              <AnchorLink to="/#priv">Aviso de Privacidad</AnchorLink>
             </li>
             <li className={`${mActive === 7 && 'active-menu'}`} onClick={() => setMActive(7)}>
-              <Link to="/">Contacto</Link>
+              <AnchorLink to="/#contact">Contacto</AnchorLink>
             </li>
           </ul>
         </nav>
